@@ -1,0 +1,124 @@
+.button-1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-White;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    max-height: 73px;
+    padding: 22px 24px;
+    z-index: 2;
+    & span {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      white-space: nowrap;
+    }
+    &::after {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      width: 100%;
+      height: 100%;
+      background: $color-lilac;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+    }
+    &::before {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+      border: 1px solid $color-Black;
+    }
+    &:hover::after {
+      background-color: $color-hover;
+    }
+    &:active::after {
+      background-color: $color-active;
+    }
+  }
+  .button-2 {
+    font-family: 'Exo 2', sans-serif;
+    color: $color-Black;
+    font-weight: 600;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 14px;
+    font-size: 18px;
+    &::after,
+    &::before {
+      content: '';
+      width: 22px;
+      height: 2px;
+      background-color: $color-border;
+    }
+    &::after {
+      margin-left: 10px;
+    }
+    &::before {
+      margin-right: 10px;
+    }
+    &:hover {
+      color: $color-border;
+    }
+    &:active {
+      color: $color-Black;
+    }
+    &:active::after,
+    &:active::before {
+      background-color: $color-Black;
+    }
+    & button {
+      font-weight: 600;
+      font-size: 0.9rem;
+      font-size: 16px;
+    }
+  }
+  .button-3 {
+    border: 1px solid $color-Black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: $color-Black;
+    padding: 22px 65px;
+    white-space: nowrap;
+    display: inline;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 18px 70px;
+    &:hover {
+      color: $color-White;
+      border: 1px solid $color-hover;
+      background-color: $color-hover;
+    }
+    &:active {
+      color: $color-White;
+      background-color: $color-active;
+    }
+  }
