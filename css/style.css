@@ -512,14 +512,14 @@ body {
 
 .materials-form {
   background-color: #FFFFFF;
-  -ms-flex-preferred-size: 548px;
-      flex-basis: 548px;
+  width: 548px;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: absolute;
 }
 
 .materials-formbody {
@@ -552,6 +552,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #C5C6CB;
+  border-radius: 30px;
 }
 
 .slider-wrapper .slider-wrapper_inner {
@@ -689,6 +691,40 @@ body {
   width: 50px;
   height: 50px;
   background-color: royalblue;
+}
+
+.more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.more-title {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.more-line {
+  background-color: #C5C6CB;
+  height: 2px;
+  width: 15px;
+}
+
+.more-total {
+  font-weight: bold;
+  margin: 0 0 57px   0;
+}
+
+.like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer-wrapper {

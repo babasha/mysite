@@ -533,10 +533,12 @@ body {
 
 .materials-form {
   background-color: $color-White;
-  flex-basis: 548px;
+  width: 548px;
+  // flex-basis: 548px;
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
+  position: absolute;
 
 }
 
@@ -564,6 +566,8 @@ body {
   width: 911px;
   align-items: center;
   flex-direction: column;
+  border:1px solid $color-border;
+  border-radius: 30px;
 
   .slider-wrapper_inner {
     width: 751px;
@@ -603,13 +607,13 @@ body {
   }
 }
 
-#slider_toggle, 
-#slider_toggle-leatherette, 
+#slider_toggle,
+#slider_toggle-leatherette,
 #slider_toggle-horny,
 #slider_toggle-suede,
 #slider_toggle-jacquarnd,
 #slider_toggle-flock {
-visibility: hidden;
+  visibility: hidden;
 }
 
 .wr {
@@ -662,13 +666,13 @@ visibility: hidden;
   border-bottom: 1px solid black;
 }
 
-#slider_toggle:checked~.slider_btn .arrow ,
-#slider_toggle-leatherette:checked~.slider_btn .arrow ,
-#slider_toggle-horny:checked~.slider_btn .arrow ,  
-#slider_toggle-jacquarnd:checked~.slider_btn .arrow ,  
-#slider_toggle-suede:checked~.slider_btn .arrow ,
-#slider_toggle-flock:checked~.slider_btn .arrow   {
-transform: rotate(135deg);
+#slider_toggle:checked~.slider_btn .arrow,
+#slider_toggle-leatherette:checked~.slider_btn .arrow,
+#slider_toggle-horny:checked~.slider_btn .arrow,
+#slider_toggle-jacquarnd:checked~.slider_btn .arrow,
+#slider_toggle-suede:checked~.slider_btn .arrow,
+#slider_toggle-flock:checked~.slider_btn .arrow {
+  transform: rotate(135deg);
   transition-duration: .25s;
 }
 
@@ -693,7 +697,35 @@ transform: rotate(135deg);
 }
 
 
-// test
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &-title {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &-line {
+    background-color: $color-border;
+    height: 2px;
+    width: 15px;
+  }
+  &-total{
+    font-weight: bold ;
+    margin: 0 0 57px   0 ;
+  }
+
+}  
+
+.like{
+  display: flex;
+  &-title{
+    
+  }
+}
+
 
 
 
@@ -716,8 +748,8 @@ transform: rotate(135deg);
   border-left: none;
 
   &__offer {
-     max-width: 50%;
-  } 
+    max-width: 50%;
+  }
 
   &__title {
     @include maintitle;
@@ -732,7 +764,7 @@ transform: rotate(135deg);
 
   &__btn {
     margin-top: 24px;
-  } 
+  }
 
   &__socials {
     height: 150px;
