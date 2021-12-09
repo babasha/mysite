@@ -504,8 +504,23 @@ body {
   display: none;
 }
 
+.outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .materials {
   border-right: #C5C6CB solid 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .materials__body {
@@ -526,6 +541,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-right: 20px;
 }
 
 .materials-formbody {
@@ -553,6 +569,12 @@ body {
   background-color: #4C5165;
 }
 
+.slider-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .slider-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,11 +584,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   border-radius: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .slider-wrapper::after {
@@ -577,6 +605,7 @@ body {
   z-index: -1;
   height: 100%;
   border-radius: 30px;
+  left: 128px;
 }
 
 .slider-wrapper .slider-wrapper_inner {

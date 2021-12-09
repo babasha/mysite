@@ -522,8 +522,15 @@ body {
 /// === /// FEEDBACK ===///
 
 /// ==== MATERIALS ///
+.outer{
+  display: flex;
+  justify-content: center;
+}
+
 .materials{
   border-right: $color-border solid 2px;
+  display: flex;
+  justify-content: center;
   // &::before {
   //   position: absolute;
   //   content:'';
@@ -548,6 +555,7 @@ body {
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
+  margin-right: 20px;
 
 }
 
@@ -577,14 +585,21 @@ body {
   }
 }
 
-.slider-wrapper {
+.slider-row{
   display: flex;
-  position: relative;
-  width: 911px;
-  align-items: center;
-  flex-direction: column;
-  // border:1px solid $color-border;
-  border-radius: 30px;
+}
+
+.slider-wrapper {
+    display: flex;
+    position: relative;
+    width: 911px;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: flex-end;
+
+
   &::after{
     content: '';
     position: absolute;
@@ -594,6 +609,8 @@ body {
     z-index: -1;
     height: 100%;
     border-radius: 30px;
+    left: 128px;
+
   }
 
 
@@ -612,6 +629,7 @@ body {
 }
 
 .input-form {
+  // margin-right: 20px;
   width: 290px;
   margin-bottom: 25px;
   border-radius: 8px;
