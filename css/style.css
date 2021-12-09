@@ -504,6 +504,10 @@ body {
   display: none;
 }
 
+.materials {
+  border-right: #C5C6CB solid 2px;
+}
+
 .materials__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -512,14 +516,16 @@ body {
 
 .materials-form {
   background-color: #FFFFFF;
-  width: 548px;
+  -ms-flex-preferred-size: 548px;
+      flex-basis: 548px;
+  margin-top: 251px;
+  height: 520px;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: absolute;
 }
 
 .materials-formbody {
@@ -540,10 +546,18 @@ body {
   font-size: 14px;
 }
 
+.materials-formbody::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: #4C5165;
+}
+
 .slider-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   width: 911px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -552,7 +566,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 30px;
+}
+
+.slider-wrapper::after {
+  content: '';
+  position: absolute;
   border: 1px solid #C5C6CB;
+  width: 911px;
+  z-index: -1;
+  height: 100%;
   border-radius: 30px;
 }
 
@@ -718,7 +741,7 @@ body {
 
 .more-total {
   font-weight: bold;
-  margin: 0 0 57px   0;
+  margin: 0 0 57px 0;
 }
 
 .like {
