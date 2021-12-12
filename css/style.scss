@@ -70,6 +70,10 @@ h5 {
   font-size: 42px;
   color: $color-Black;
 }
+h6 {
+  font-size: 42px;
+  color: $color-Black;
+}
 
 
 
@@ -530,19 +534,16 @@ body {
 .materials{
   border-right: $color-border solid 2px;
   display: flex;
-  justify-content: center;
-  // &::before {
-  //   position: absolute;
-  //   content:'';
-  //   width: 50px;
-  //   height: 50px;
-  //   background-color: $color-Background;
-  //   z-index: -1;
-  //   border: 1px solid $color-border;
-  // }
-  &__body {
-    display: flex;
-  }  
+  // justify-content: center;
+  flex-direction: column;
+  // &__body {
+  //   display: flex;
+  // }  
+}
+
+.materials-title{
+  display: flex;
+  justify-content: flex-start;
 }
 
 
@@ -555,7 +556,6 @@ body {
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
-  margin-right: 20px;
 
 }
 
@@ -591,15 +591,13 @@ body {
 
 .slider-wrapper {
     display: flex;
-    position: relative;
+    position: relative; 
     width: 911px;
     align-items: center;
     border-radius: 30px;
     flex-direction: row;
     justify-content: center;
-    justify-content: flex-end;
-
-
+    
   &::after{
     content: '';
     position: absolute;
