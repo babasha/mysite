@@ -70,6 +70,7 @@ h5 {
   font-size: 42px;
   color: $color-Black;
 }
+
 h6 {
   font-size: 42px;
   color: $color-Black;
@@ -94,8 +95,8 @@ body {
     // max-width: 1598px;
     // min-width: 1562px;
     border-left: $color-border solid 2px;
-    padding-left: 97px;
-    padding-right: 97px;
+    // padding-left: 97px;
+    // padding-right: 97px;
   }
 }
 
@@ -519,6 +520,10 @@ body {
   }
 }
 
+// .contnet-border{
+// margin-top: -10px;
+// }
+
 .hide {
   display: none;
 }
@@ -526,13 +531,13 @@ body {
 /// === /// FEEDBACK ===///
 
 /// ==== MATERIALS ///
-.outer{
+.outer {
   display: flex;
   justify-content: center;
 }
 
-.materials{
-  border-right: $color-border solid 2px;
+.materials {
+  // border-right: $color-border solid 2px;
   display: flex;
   // justify-content: center;
   flex-direction: column;
@@ -541,22 +546,24 @@ body {
   // }  
 }
 
-.materials-title{
+.materials-title {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 32px;
 }
 
 
 
 .materials-form {
   background-color: $color-White;
-  flex-basis: 548px;
-  margin-top:251px;
+  // flex-basis: 548px;
+  max-width: 548px;
+  margin-top: 201px;
   height: 520px;
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
-
+  margin-right:73px;
 }
 
 
@@ -576,44 +583,39 @@ body {
     margin-bottom: 24px;
     font-size: 14px;
   }
-
-  &::before  {
-    content: '';
-    width: 50px ;
-    height: 50px;
-    background-color: $color-active;
-  }
 }
 
-.slider-row{
+.slider-row {
   display: flex;
 }
 
 .slider-wrapper {
-    display: flex;
-    position: relative; 
-    width: 911px;
-    align-items: center;
-    border-radius: 30px;
-    flex-direction: row;
-    justify-content: center;
-    
-  &::after{
+  display: flex;
+  position: relative;
+  max-width: 1598px;
+  align-items: center;
+  border-radius: 30px;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  &::after {
     content: '';
     position: absolute;
-    border:1px solid $color-border;
+    border: 1px solid $color-border;
     width: 911px;
-    // width: 751px;
     z-index: -1;
     height: 100%;
     border-radius: 30px;
-    left: 128px;
+   &_inner{
+     
+   }
 
   }
 
 
   .slider-wrapper_inner {
     width: 751px;
+    // margin-right: 121px;  
   }
 }
 
@@ -627,7 +629,6 @@ body {
 }
 
 .input-form {
-  // margin-right: 20px;
   width: 290px;
   margin-bottom: 25px;
   border-radius: 8px;
@@ -643,14 +644,6 @@ body {
   }
 }
 
-.materials-summary {
-  &::marker {
-    &::before {
-      color: red;
-    }
-  }
-}
-
 #slider_toggle,
 #slider_toggle-leatherette,
 #slider_toggle-horny,
@@ -658,37 +651,33 @@ body {
 #slider_toggle-jacquarnd,
 #slider_toggle-flock {
   visibility: hidden;
+  // margin-top: -15px;
 }
 
 .wr {
   display: flex;
 }
+.contnet-border{
+// background-color: #C8C9CD;
+border-top:2px solid #C8C9CD;
+max-width: 614px;
+}
+
 
 .arrow {
   margin: 7px;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #6E18C0;
-  border-right: 2px solid #6E18C0;
-  margin-right: 5px;
-  transform: rotate(45deg);
-  transition-duration: .25s;
-}
-
-.leatherette {
-  margin: 7px;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #6E18C0;
-  border-right: 2px solid #6E18C0;
-  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  margin-left: 20px;
   transform: rotate(45deg);
   transition-duration: .25s;
 }
 
 .slider_paragraph {
   margin: 0;
-  margin-left: 139px;
+  // margin-left: 139px;
 }
 
 .slider_content,
@@ -699,21 +688,17 @@ body {
 .slider_content-flock {
   transition-duration: .25s;
   visibility: hidden;
-  margin-left: 139px;
-
+  margin-top: -15px;
   &__inner {
     margin: 0px;
   }
 }
 
-.contnet-border {
-  border-bottom: 1px solid black;
-}
 
 #slider_toggle:checked~.slider_btn .arrow,
+#slider_toggle-jacquarnd:checked~.slider_btn .arrow,
 #slider_toggle-leatherette:checked~.slider_btn .arrow,
 #slider_toggle-horny:checked~.slider_btn .arrow,
-#slider_toggle-jacquarnd:checked~.slider_btn .arrow,
 #slider_toggle-suede:checked~.slider_btn .arrow,
 #slider_toggle-flock:checked~.slider_btn .arrow {
   transform: rotate(135deg);
@@ -734,12 +719,6 @@ body {
   transition-duration: .25s;
 }
 
-.boxbox {
-  width: 50px;
-  height: 50px;
-  background-color: royalblue;
-}
-
 
 .more {
   display: flex;
@@ -756,18 +735,18 @@ body {
     height: 2px;
     width: 15px;
   }
-  &-total{
-    font-weight: bold ;
-    margin: 0 0 57px 0 ;
+
+  &-total {
+    font-weight: bold;
+    margin: 0 0 57px 0;
   }
 
-}  
+}
 
-.like{
+.like {
   display: flex;
-  &-title{
-    
-  }
+
+  &-title {}
 }
 
 
@@ -779,13 +758,21 @@ body {
 /// ==== // MATERIALS ///
 
 /// === FOOTER === ///
-.footer-wrapper {
+
+footer{
+  margin-top: 180px;
   background-color: $color-White;
+  margin-top: 57px;
+  width: 100%;
+}
+
+.footer-wrapper {
+  // background-color: $color-White;
 }
 
 .footer {
-  margin-top: 57px;
-  background-color: $color-White;
+  
+  
   padding-top: 65px;
   display: flex;
   justify-content: space-evenly;

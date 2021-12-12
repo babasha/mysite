@@ -60,8 +60,6 @@ body {
   -ms-flex-preferred-size: 1598px;
       flex-basis: 1598px;
   border-left: #C5C6CB solid 2px;
-  padding-left: 97px;
-  padding-right: 97px;
 }
 
 .number {
@@ -519,7 +517,6 @@ body {
 }
 
 .materials {
-  border-right: #C5C6CB solid 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,13 +533,13 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 32px;
 }
 
 .materials-form {
   background-color: #FFFFFF;
-  -ms-flex-preferred-size: 548px;
-      flex-basis: 548px;
-  margin-top: 251px;
+  max-width: 548px;
+  margin-top: 201px;
   height: 520px;
   border-radius: 30px;
   display: -webkit-box;
@@ -550,6 +547,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-right: 73px;
 }
 
 .materials-formbody {
@@ -570,13 +568,6 @@ body {
   font-size: 14px;
 }
 
-.materials-formbody::before {
-  content: '';
-  width: 50px;
-  height: 50px;
-  background-color: #4C5165;
-}
-
 .slider-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -588,7 +579,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 911px;
+  max-width: 1598px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -597,9 +588,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .slider-wrapper::after {
@@ -610,7 +601,6 @@ body {
   z-index: -1;
   height: 100%;
   border-radius: 30px;
-  left: 128px;
 }
 
 .slider-wrapper .slider-wrapper_inner {
@@ -643,10 +633,6 @@ body {
           transition-duration: .25s;
 }
 
-.materials-summary::marker::before {
-  color: red;
-}
-
 #slider_toggle,
 #slider_toggle-leatherette,
 #slider_toggle-horny,
@@ -662,26 +648,18 @@ body {
   display: flex;
 }
 
-.arrow {
-  margin: 7px;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #6E18C0;
-  border-right: 2px solid #6E18C0;
-  margin-right: 5px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
+.contnet-border {
+  border-top: 2px solid #C8C9CD;
+  max-width: 614px;
 }
 
-.leatherette {
+.arrow {
   margin: 7px;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #6E18C0;
-  border-right: 2px solid #6E18C0;
-  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  margin-left: 20px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition-duration: .25s;
@@ -690,7 +668,6 @@ body {
 
 .slider_paragraph {
   margin: 0;
-  margin-left: 139px;
 }
 
 .slider_content,
@@ -702,7 +679,7 @@ body {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
   visibility: hidden;
-  margin-left: 139px;
+  margin-top: -15px;
 }
 
 .slider_content__inner,
@@ -714,14 +691,10 @@ body {
   margin: 0px;
 }
 
-.contnet-border {
-  border-bottom: 1px solid black;
-}
-
 #slider_toggle:checked ~ .slider_btn .arrow,
+#slider_toggle-jacquarnd:checked ~ .slider_btn .arrow,
 #slider_toggle-leatherette:checked ~ .slider_btn .arrow,
 #slider_toggle-horny:checked ~ .slider_btn .arrow,
-#slider_toggle-jacquarnd:checked ~ .slider_btn .arrow,
 #slider_toggle-suede:checked ~ .slider_btn .arrow,
 #slider_toggle-flock:checked ~ .slider_btn .arrow {
   -webkit-transform: rotate(135deg);
@@ -742,12 +715,6 @@ body {
   margin-left: 139px;
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
-}
-
-.boxbox {
-  width: 50px;
-  height: 50px;
-  background-color: royalblue;
 }
 
 .more {
@@ -784,13 +751,14 @@ body {
   display: flex;
 }
 
-.footer-wrapper {
+footer {
+  margin-top: 180px;
   background-color: #FFFFFF;
+  margin-top: 57px;
+  width: 100%;
 }
 
 .footer {
-  margin-top: 57px;
-  background-color: #FFFFFF;
   padding-top: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
