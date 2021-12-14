@@ -563,44 +563,38 @@ body {
 .materials-form {
   background-color: $color-White;
   flex-basis: 548px;
-  // margin-top: 201px;
   height: 520px;
   border-radius: 30px;
   display: flex;
   justify-content: center;
-  margin-right: -89px;
+  margin-right: -55px;
+  z-index: 1;
 
   &_inner {
-    width: 428px;
+    flex-basis: 428px;
+    min-width: 336px;
+    padding: 0px 10px;
+  }
 
-    &_title {
-      margin-top: 60px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 22px;
-    }
+  &_title {
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+  }
 
-    &_description {
-      text-align: center;
-      margin-top: 24px;
-      margin-bottom: 24px;
-      font-size: 14px;
+  &_description {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 14px;
 
-    }
+
   }
 }
 
-
-
-
-
-
-
-
-
 .slider-inner {
-  max-width: 614px;
-  padding-left: 150px;
+  flex-basis: 614px;
 
   &_title {
     font-size: 22px;
@@ -616,31 +610,17 @@ body {
 
 
 .slider-wrapper_inner {
-  // max-width: 911px;
+  flex-basis: 791px;
+  padding: 0px 65px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-content: center;
-
-  &::before {
-    min-width: 825px;
-    content: '';
-    position: absolute;
-    border: 1px solid #C5C6CB;
-    width: calc(950 / 1658 * 100%);
-    z-index: -1;
-    height: 100%;
-    border-radius: 30px;
-  }
+  border: 1px solid #C5C6CB;
+  border-radius: 30px;
 }
 
 .form {
   text-align: center;
-}
-
-.bform {
-  margin-bottom: 61px;
-
 }
 
 .input-form {
@@ -674,7 +654,7 @@ body {
 
 .contnet-border {
   border-top: 2px solid #C8C9CD;
-  max-width: 614px;
+  flex-basis: 614px;
 }
 
 
